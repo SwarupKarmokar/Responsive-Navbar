@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+/* UTILITY CLASS  */
+.primary-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    background: transparent;
+    color: white;
+    transition:.7s ease-out;
+}
+
+.primary-btn:hover {
+    color: black;
+    background-color: lightgreen;
+
+}
+/* UTILITY CLASS ENDS  */
+
+/* HEADER STARTS HERE  */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(./images/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    /* background-color: #fff; */
+}
+
+.logo img{
+    width: 200px;
+}
+
+nav a {
+    color: white;
+    transition: 1s ease-out;
+}
+
+nav a:hover {
+    color: lightcoral;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    flex-direction: end;
+}
+
+.hamburger {
+    display: none;
+    color: white;
+}
+
+.fa {
+    font-size: 20px;
+    /* color: white; */
+}
+
+.text-box {
+    width: 90%;
+    color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box p {
+    margin-bottom: 20px;
+}
+
+/* HEADER ENDS HERE  */
+
+
+/* COURSE SECTION START  */
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+/* COURSE SECTION ENDS  */
+
+
+
+
+
+
+
+/* MEDIA SCREEN FOR RESPONSIVENESS  */
+@media screen and (width <= 760px) {
+    .hamburger{
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 90px;
+        left: -100%;
+        /* left: 0; */
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        transition: .3s;
+    }
+
+    .nav-menu.active {
+        left: 0
+    }
+
+    .hamburger.active {
+        color: red;
+    }
+}
